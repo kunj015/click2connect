@@ -127,3 +127,26 @@
     filter: invert(1);
   }
 }
+
+.navBackground{
+  background-color: rgb(21, 43, 67);
+}
+
+.flex{
+  display: flex;
+}
+
+.justifyEvenly{
+  justify-content: space-evenly;
+}
+
+.py5{
+  padding:15px 0px;
+}
+
+/* Navbar  */
+.navInput{
+  outline: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
