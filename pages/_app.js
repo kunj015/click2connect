@@ -5,7 +5,7 @@ import BetaVersion from '../components/BetaVersion'
 
 function MyApp({ Component, pageProps }) {
   return<>
-  <BetaVersion/>
+  {/* <BetaVersion/> */}
   <Navbar/>
     <Component {...pageProps} />
   <Footer/>
