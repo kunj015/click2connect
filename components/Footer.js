@@ -27,21 +27,56 @@ const Footer = () => {
                 </Link>
                 </li>
                 <li>
-                <Link href={"/contact"} className="text-gray-100 hover:text-gray-400">
-                    Contact Here
-                </Link>
-                </li>
-                <li>
                 <Link href={"/blog"} className="text-gray-100 hover:text-gray-400" >
                 Blogs
                 </Link>
                 </li>
                 <li>
-                    <a className="text-gray-100 hover:text-gray-400">Fourth Link</a>
+                <Link href={"/gallery"} className="text-gray-100 hover:text-gray-400">
+                Gallery
+                </Link>
                 </li>
                 </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <h2 className="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">About</h2>
+                <nav className="list-none mb-10">
+                <li>
+                <Link href={"/contact"} className="text-gray-100 hover:text-gray-400">
+                    Contact Here
+                </Link>
+                </li>
+                <li>
+                <Link href={"/about"} className="text-gray-100 hover:text-gray-400">
+                    About Us
+                </Link>
+                </li>
+                {/* <li>
+                    <a className="text-gray-100 hover:text-gray-400">Third Link</a>
+                </li>
+                <li>
+                    <a className="text-gray-100 hover:text-gray-400">Fourth Link</a>
+                </li> */}
+                </nav>
+            </div>
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                <h2 className="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">Our Policies</h2>
+                <nav className="list-none mb-10">
+                <li>
+                    <a className="text-gray-100 hover:text-gray-400">Privacy & Policy</a>
+                </li>
+                {/* <li>
+                    <a className="text-gray-100 hover:text-gray-400">Second Link</a>
+                </li>
+                <li>
+                    <a className="text-gray-100 hover:text-gray-400">Third Link</a>
+                </li>
+                <li>
+                    <a className="text-gray-100 hover:text-gray-400">Fourth Link</a>
+                </li> */}
+                </nav>
+            </div>
+            {/* <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                 <h2 className="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
                 <nav className="list-none mb-10">
                 <li>
@@ -57,41 +92,7 @@ const Footer = () => {
                     <a className="text-gray-100 hover:text-gray-400">Fourth Link</a>
                 </li>
                 </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                <h2 className="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                <nav className="list-none mb-10">
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">First Link</a>
-                </li>
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">Second Link</a>
-                </li>
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">Third Link</a>
-                </li>
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">Fourth Link</a>
-                </li>
-                </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                <h2 className="title-font font-medium text-gray-100 tracking-widest text-sm mb-3">CATEGORIES</h2>
-                <nav className="list-none mb-10">
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">First Link</a>
-                </li>
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">Second Link</a>
-                </li>
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">Third Link</a>
-                </li>
-                <li>
-                    <a className="text-gray-100 hover:text-gray-400">Fourth Link</a>
-                </li>
-                </nav>
-            </div>
+            </div> */}
             </div>
         </div>
         {/* <div className="bg-gray-100">

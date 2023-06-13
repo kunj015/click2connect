@@ -1,4 +1,6 @@
 import React,{useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const [name,setName] = useState();
@@ -21,7 +23,8 @@ const ContactForm = () => {
     e.preventDefault();
     const data = {name,email,message}
     console.log(data);
-    let res =await fetch("http://localhost:3000/api/contactform",{
+    // let res =await fetch("http://localhost:3000/api/contactform",{
+    let res =await fetch("http://www.connect2click.com/api/contactform",{
       method :"POST",
       headers:{
         'Content-Type':'application/json',
@@ -30,7 +33,29 @@ const ContactForm = () => {
       
     })
     let response = await res.json()
-    console.log(response);
+    if(res.status == 200){
+      toast.success(response.message, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }else{
+      toast.error(response.error, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
     setName('')
     setEmail('')
     setMessage('')
@@ -39,6 +64,18 @@ const ContactForm = () => {
 
   return (
     <div>
+    <ToastContainer
+    position="top-right"
+    autoClose={2000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="light"
+  />
     <form onSubmit={handleSubmit}  method='POST' className="text-gray-600 body-font relative">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-12">

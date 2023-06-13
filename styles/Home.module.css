@@ -158,3 +158,12 @@
   width: 40rem;
 }
 
+/* @media (width:5000px) {
+  .navInput{
+    display: none;
+    outline: 1px solid black;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding: 8px 15px;
+  }
+} */

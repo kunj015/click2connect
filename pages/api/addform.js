@@ -15,13 +15,17 @@ const handler = async (req,res)=>{
                 speciality: req.body.speciality,
                 about: req.body.about
         })
-        await f.save();
-        res.status(200).json({message:"Form submitted"})
+
+        let newForm = await Photographerform.findOne({email:req.body.email})
+        if (newForm) {
+            res.status(400).json({error:"You have already submitted form please wait we will reach you soon"})
+        }else{
+            await f.save();
+            res.status(200).json({message:"Thank you for joining us we will reach you soon"})
+        }
     }else{
         res.status(400).json({error:"Some error occured"})
     }
-//   let form = await Photographerform.find();
-//   res.status(200).json({form})
 }
 
 export default connectDb(handler)
